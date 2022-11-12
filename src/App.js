@@ -5,8 +5,8 @@ import Watch from './pages/Watch';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/watch" element={<Watch />} />
+      <Route path="/" element={<Home />} /> 
+      <Route path="/watch" element={<Watch />} /> 
     </Routes>
   );
 }
