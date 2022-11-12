@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { io } from 'socket.io-client';
 
 import '../styles/EnterCard.scss';
 
@@ -12,6 +13,7 @@ class EnterCard extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.socket = io('http://localhost:3001');
     }
 
     handleChange = (e) => {
@@ -20,7 +22,8 @@ class EnterCard extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        window.location.href = '/watch';
+        this.socket.emit("new_user", this.state.username);
+        // window.location.href = '/watch';
     }
 
     render() {
