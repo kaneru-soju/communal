@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+.title {
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 350;
+    font-size: 80px;
+    letter-spacing: 10px;
+    background: -webkit-linear-gradient(white, #38495a);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.enter-card {
+	position: relative;
+    background: #19191b;
+	z-index: 0;
+	width: 400px;
+	height: 300px;
+	margin: 5rem;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+    box-shadow: 0 0 20px rgba(148, 147, 147, 0.5);
+	text-align: center;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #19191b;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: conic-gradient(transparent, rgba(148, 147, 147, 0.5), transparent 30%);
+		animation: rotate 4s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: #19191b;
+		border-radius: 5px;
+	}
+}
+
+.user {
+	position: relative;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: rgba(148, 147, 147, 0.75);
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid rgba(148, 147, 147, 0.75);
+	outline: none;
+	background: transparent;
+}
+
+.button {
+	position: relative;
+	margin-top: 4rem;
+	background: transparent;
+	border: none;
+	font-family: 'lato', sans-serif;
+	font-size: 24px;
+    background: -webkit-linear-gradient(white, #38495a);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: 4px;
+	outline: none;
+	cursor: pointer;
+}
