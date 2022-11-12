@@ -23,7 +23,7 @@ class EnterCard extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.socket.emit("new_user", this.state.username);
-        // window.location.href = '/watch';
+        window.location.href = '/watch';
     }
 
     render() {

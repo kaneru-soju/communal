@@ -1,0 +1,19 @@
+.video-chat-container {
+    display: flex;
+    flex-direction: row;
+    overflow: none;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    overflow: none;
+}
+
+
+.video-player {
+    width: 80%;
+}
+
+.chat-box {
+    max-height: 500px;
+    width: 350px;
+}
